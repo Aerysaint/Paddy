@@ -1,1 +1,1 @@
-# PDF Outline Extractor - Core Package
+# PDF Layout Extractor Package

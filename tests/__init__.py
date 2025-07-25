@@ -1,1 +1,1 @@
-# PDF Outline Extractor - Test Package
+# Test package

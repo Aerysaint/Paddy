@@ -1,0 +1,2009 @@
+{
+  "overall_accuracy": 0.0,
+  "total_files_processed": 5,
+  "total_exact_matches": 0,
+  "total_expected_entries": 58,
+  "avg_processing_time": 328.06701335906985,
+  "max_processing_time": 1637.3213710784912,
+  "total_processing_time": 1640.3350667953491,
+  "page_numbering_analysis": {
+    "total_page_errors": 8,
+    "files_with_page_errors": 3,
+    "common_page_differences": {
+      "1": 8
+    },
+    "zero_based_indexing_suspected": 0,
+    "one_based_indexing_suspected": 8
+  },
+  "file_results": [
+    {
+      "file": "pdfs/file01.pdf",
+      "pdf_name": "file01",
+      "result": {
+        "title": "Application form for grant of LTC advance",
+        "outline": []
+      },
+      "expected": {
+        "title": "Application form for grant of LTC advance  ",
+        "outline": []
+      },
+      "comparison": {
+        "title_match": true,
+        "title_actual": "Application form for grant of LTC advance",
+        "title_expected": "Application form for grant of LTC advance  ",
+        "outline_count_actual": 0,
+        "outline_count_expected": 0,
+        "exact_matches": 0,
+        "level_matches": 0,
+        "text_matches": 0,
+        "page_matches": 0,
+        "page_errors": [],
+        "missing_entries": [],
+        "extra_entries": [],
+        "accuracy_score": 1.0
+      },
+      "debug_info": {
+        "blocks_extracted": 60,
+        "font_clustering_complete": true,
+        "blocks_after_header_filter": 60,
+        "table_blocks": 0,
+        "pages_processed": 1,
+        "title_detected": true,
+        "title_length": 41,
+        "headings_detected": 0,
+        "processing_time": 1637.3213710784912
+      },
+      "processing_time": 1637.3213710784912
+    },
+    {
+      "file": "pdfs/file02.pdf",
+      "pdf_name": "file02",
+      "result": {
+        "title": "Overview  Foundation Level Extensions",
+        "outline": [
+          {
+            "level": "H1",
+            "text": "International Software Testing Qualifications Board",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "Revision History",
+            "page": 3
+          },
+          {
+            "level": "H1",
+            "text": "Table of Contents",
+            "page": 4
+          },
+          {
+            "level": "H2",
+            "text": "Revision History . 3",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "1.Introduction to the Foundation Level Extensions . 6",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "2.Introduction to Foundation Level Agile Tester Extension . 7",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "3.Overview of the Foundation Level Extension",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "4.References . 12",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "Acknowledgements",
+            "page": 5
+          },
+          {
+            "level": "H2",
+            "text": "This document was produced by a team from the International Software Testing Qualifications Board",
+            "page": 5
+          },
+          {
+            "level": "H3",
+            "text": "Authors: Rex Black, Anders Claesson, Gerry Coleman, Bertrand Cornanguer, Istvan Forgacs, Alon",
+            "page": 5
+          },
+          {
+            "level": "H3",
+            "text": "Internal Reviewers: Mette Bruhn-Pedersen, Christopher Clements, Alessandro Collino, Debra",
+            "page": 5
+          },
+          {
+            "level": "H1",
+            "text": "1.Introduction to the Foundation Level Extensions",
+            "page": 6
+          },
+          {
+            "level": "H1",
+            "text": "2.Introduction to Foundation Level Agile Tester Extension",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "1.Professionals who have achieved in-depth testing experience in traditional methods and would",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "2.Junior professional testers who are just starting in the testing profession, have received the",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "3.Professionals who are relatively new to testing and are required to implement test approaches,",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "4.Professionals",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "In addition, all Foundation Level syllabus learning objectives are examinable at the same K- level in an",
+            "page": 7
+          },
+          {
+            "level": "H3",
+            "text": "Syllabus",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "The software industry changes rapidly. To deal with these changes and to provide the stakeholders with",
+            "page": 9
+          },
+          {
+            "level": "H3",
+            "text": "An Agile Tester can…",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "Chapter 1: Agile Software Development",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "Chapter 2: Fundamental Agile Testing Principles, Practices, and Processes",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "Chapter 3: Agile Testing Methods, Techniques, and Tools",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "4.References",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "The following registered trademarks and service marks are used in this document:",
+            "page": 12
+          },
+          {
+            "level": "H3",
+            "text": "Identifier",
+            "page": 12
+          }
+        ]
+      },
+      "expected": {
+        "title": "Overview  Foundation Level Extensions  ",
+        "outline": [
+          {
+            "level": "H1",
+            "text": "Revision History ",
+            "page": 2
+          },
+          {
+            "level": "H1",
+            "text": "Table of Contents ",
+            "page": 3
+          },
+          {
+            "level": "H1",
+            "text": "Acknowledgements ",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "1. Introduction to the Foundation Level Extensions ",
+            "page": 5
+          },
+          {
+            "level": "H1",
+            "text": "2. Introduction to Foundation Level Agile Tester Extension ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.1 Intended Audience ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.2 Career Paths for Testers ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.3 Learning Objectives ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.4 Entry Requirements ",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "2.5 Structure and Course Duration ",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "2.6 Keeping It Current ",
+            "page": 8
+          },
+          {
+            "level": "H1",
+            "text": "3. Overview of the Foundation Level Extension – Agile TesterSyllabus ",
+            "page": 9
+          },
+          {
+            "level": "H2",
+            "text": "3.1 Business Outcomes ",
+            "page": 9
+          },
+          {
+            "level": "H2",
+            "text": "3.2 Content ",
+            "page": 9
+          },
+          {
+            "level": "H1",
+            "text": "4. References ",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "4.1 Trademarks ",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "4.2 Documents and Web Sites ",
+            "page": 11
+          }
+        ]
+      },
+      "comparison": {
+        "title_match": true,
+        "title_actual": "Overview  Foundation Level Extensions",
+        "title_expected": "Overview  Foundation Level Extensions  ",
+        "outline_count_actual": 28,
+        "outline_count_expected": 17,
+        "exact_matches": 0,
+        "level_matches": 3,
+        "text_matches": 3,
+        "page_matches": 0,
+        "page_errors": [
+          {
+            "text": "Revision History",
+            "actual_page": 3,
+            "expected_page": 2,
+            "difference": 1
+          },
+          {
+            "text": "Table of Contents",
+            "actual_page": 4,
+            "expected_page": 3,
+            "difference": 1
+          },
+          {
+            "text": "Acknowledgements",
+            "actual_page": 5,
+            "expected_page": 4,
+            "difference": 1
+          }
+        ],
+        "missing_entries": [
+          {
+            "level": "H1",
+            "text": "1. Introduction to the Foundation Level Extensions ",
+            "page": 5
+          },
+          {
+            "level": "H1",
+            "text": "2. Introduction to Foundation Level Agile Tester Extension ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.1 Intended Audience ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.2 Career Paths for Testers ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.3 Learning Objectives ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "2.4 Entry Requirements ",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "2.5 Structure and Course Duration ",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "2.6 Keeping It Current ",
+            "page": 8
+          },
+          {
+            "level": "H1",
+            "text": "3. Overview of the Foundation Level Extension – Agile TesterSyllabus ",
+            "page": 9
+          },
+          {
+            "level": "H2",
+            "text": "3.1 Business Outcomes ",
+            "page": 9
+          },
+          {
+            "level": "H2",
+            "text": "3.2 Content ",
+            "page": 9
+          },
+          {
+            "level": "H1",
+            "text": "4. References ",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "4.1 Trademarks ",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "4.2 Documents and Web Sites ",
+            "page": 11
+          }
+        ],
+        "extra_entries": [
+          {
+            "level": "H1",
+            "text": "International Software Testing Qualifications Board",
+            "page": 1
+          },
+          {
+            "level": "H2",
+            "text": "Revision History . 3",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "1.Introduction to the Foundation Level Extensions . 6",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "2.Introduction to Foundation Level Agile Tester Extension . 7",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "3.Overview of the Foundation Level Extension",
+            "page": 4
+          },
+          {
+            "level": "H1",
+            "text": "4.References . 12",
+            "page": 4
+          },
+          {
+            "level": "H2",
+            "text": "This document was produced by a team from the International Software Testing Qualifications Board",
+            "page": 5
+          },
+          {
+            "level": "H3",
+            "text": "Authors: Rex Black, Anders Claesson, Gerry Coleman, Bertrand Cornanguer, Istvan Forgacs, Alon",
+            "page": 5
+          },
+          {
+            "level": "H3",
+            "text": "Internal Reviewers: Mette Bruhn-Pedersen, Christopher Clements, Alessandro Collino, Debra",
+            "page": 5
+          },
+          {
+            "level": "H1",
+            "text": "1.Introduction to the Foundation Level Extensions",
+            "page": 6
+          },
+          {
+            "level": "H1",
+            "text": "2.Introduction to Foundation Level Agile Tester Extension",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "1.Professionals who have achieved in-depth testing experience in traditional methods and would",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "2.Junior professional testers who are just starting in the testing profession, have received the",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "3.Professionals who are relatively new to testing and are required to implement test approaches,",
+            "page": 7
+          },
+          {
+            "level": "H1",
+            "text": "4.Professionals",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "In addition, all Foundation Level syllabus learning objectives are examinable at the same K- level in an",
+            "page": 7
+          },
+          {
+            "level": "H3",
+            "text": "Syllabus",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "The software industry changes rapidly. To deal with these changes and to provide the stakeholders with",
+            "page": 9
+          },
+          {
+            "level": "H3",
+            "text": "An Agile Tester can…",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "Chapter 1: Agile Software Development",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "Chapter 2: Fundamental Agile Testing Principles, Practices, and Processes",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "Chapter 3: Agile Testing Methods, Techniques, and Tools",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "4.References",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "The following registered trademarks and service marks are used in this document:",
+            "page": 12
+          },
+          {
+            "level": "H3",
+            "text": "Identifier",
+            "page": 12
+          }
+        ],
+        "accuracy_score": 0.0
+      },
+      "debug_info": {
+        "blocks_extracted": 447,
+        "font_clustering_complete": true,
+        "blocks_after_header_filter": 354,
+        "table_blocks": 45,
+        "pages_processed": 12,
+        "title_detected": true,
+        "title_length": 37,
+        "headings_detected": 28,
+        "processing_time": 1.1774568557739258
+      },
+      "processing_time": 1.1774568557739258
+    },
+    {
+      "file": "pdfs/file03.pdf",
+      "pdf_name": "file03",
+      "result": {
+        "title": "RFP: Request for Proposal",
+        "outline": [
+          {
+            "level": "H1",
+            "text": "RFP: Request for Proposal",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "To Present a Proposal for Developing",
+            "page": 1
+          },
+          {
+            "level": "H2",
+            "text": "Summary",
+            "page": 2
+          },
+          {
+            "level": "H3",
+            "text": "The purpose of this",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "developed is to document and clearly communicate:",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "Proposals may be e-mailed, mailed, couriered or faxed to: Larry Moore",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "Those proposals that are short-listed will be invited to discuss their proposal during the week",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "If you require further information or have any questions, please contact Michael Ridley by e-",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Background",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "First, some background on the ODL. For the last two years the Ontario Library Association",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Libraries that serve very different clientele recognize that by working together they can create",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "We are moving into a period of convergence. With convergence we no longer have to license",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "The concept of an ODL is a key element in",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Libraries have long been a key delivery point for public services. The ODL will allow that",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Jurisdiction-wide digital libraries are very practical and very real. The ODL we propose is",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "The ODL will be a partnership-based organization providing seamless electronic information",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "The principles which will define and guide the ODL are:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Equitable access for all Ontarians:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will facilitate consensus among members regarding ODL’s portfolio of electronic",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will balance the interests and realities of small and large as well as rich and poor",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Shared governance structure:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will work based on an underlying assumption of trust and synergy.",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Shared funding:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will leverage provincial, institutional, and local dollars to realize economies of scale",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will be willing to pool talents and dollars in order to provide common services that are",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Local points of entry:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "We will provide the licenses, infrastructure, services and support that enable local",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "Access:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "ce:Guidance and Advi",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "Training:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "Technological Support:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "What could the ODL really mean?",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "For each Ontario citizen it could mean:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "For each Ontario student it could mean:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "For each Ontario library it could mean:",
+            "page": 6
+          },
+          {
+            "level": "H4",
+            "text": "Ontario government it could mean:For the",
+            "page": 6
+          },
+          {
+            "level": "H4",
+            "text": "porated non-profit organization governed by a Board of Directors electedODL will be an incor",
+            "page": 6
+          },
+          {
+            "level": "H1",
+            "text": "2007. The planning process must also secure the full commitment of all stakeholders, as",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "Milestones",
+            "page": 7
+          },
+          {
+            "level": "H3",
+            "text": "Approach and Specific Proposal Requirements",
+            "page": 7
+          },
+          {
+            "level": "H4",
+            "text": "The firm/consultant",
+            "page": 7
+          },
+          {
+            "level": "H4",
+            "text": "The proposal should include the following information:",
+            "page": 7
+          },
+          {
+            "level": "H4",
+            "text": "Specifically, proposals will be evaluated proposals according to the following criteria:",
+            "page": 8
+          },
+          {
+            "level": "H4",
+            "text": "Questions regarding this RFP should be directed by e-mail only to Michael Ridley",
+            "page": 8
+          },
+          {
+            "level": "H4",
+            "text": "Bidders are asked not to contact any other member of the ODL Catalyst Team or the ODL Steering",
+            "page": 8
+          },
+          {
+            "level": "H4",
+            "text": "Phase I: Business Planning",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Result:",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Phase II: Implementing and Transitioning",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Result:",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "The seed money requested will allow libraries to realign their budgets and services as the infrastructure",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Phase III: Operating and Growing the ODL",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "In the third phase the ODL moves into the operational stage. Ontarians will experience the full benefits",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "The ongoing funding of the ODL will be based on a partnership model involving all the key participants",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "outlines the model. This model is based on these assumptions:",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "OVERVIEW OF ODL FUNDING MODEL",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "Funding Source",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "While the private sector will be invited to participate in the ODL through the endowment, gifts and in-",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "A $50M budget leverages the consortium buying power of the province’s libraries to secure the best",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "It is important to recognize that every new dollar per citizen invested in the Ontario Digital Library has a",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "Appendix B:",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "1.Preamble",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "2.Terms of Reference",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "2.7 securing commitment from library, government, and institutional stakeholders for implementation",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "2.9 undertaking advocacy efforts to promote the ODL to the broader communities including library",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "3.Membership",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "3.1 Schools:",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "3.3 Colleges:",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "3.4 Public libraries:",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "3.6 It is anticipated that as planning for the ODL evolves, the Steering Committee may, at its",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "4.Appointment Criteria and Process",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "5.Term",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "6.Chair",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "Chair will be appointed by the Board of the Ontario Library Association.",
+            "page": 12
+          },
+          {
+            "level": "H3",
+            "text": "Role of the Chair:",
+            "page": 12
+          },
+          {
+            "level": "H4",
+            "text": "In addition to the characteristics for appointees (4.2) the role of the chair will be as a process agent",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "7.Meetings",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "8.Lines of Accountability and Communication",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "8.3 The Steering Committee is accountable to its constituent groups and other stakeholders for",
+            "page": 13
+          },
+          {
+            "level": "H1",
+            "text": "9.Financial and Administrative Policies",
+            "page": 13
+          },
+          {
+            "level": "H2",
+            "text": "9.1 Service on the Steering Committee is non-remunerative",
+            "page": 13
+          },
+          {
+            "level": "H3",
+            "text": "9.2 Travel and meeting expenses for Steering Committee members are reimbursed according to the",
+            "page": 13
+          },
+          {
+            "level": "H3",
+            "text": "9.3 Conflict of Interest:",
+            "page": 13
+          },
+          {
+            "level": "H4",
+            "text": "Appendix C:",
+            "page": 14
+          },
+          {
+            "level": "H4",
+            "text": "The purpose of the ODL is to provide equal access to information for all Ontario citizens through",
+            "page": 14
+          },
+          {
+            "level": "H4",
+            "text": "of their education, life and work. Some examples:",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "1.Reference Resources",
+            "page": 14
+          },
+          {
+            "level": "H2",
+            "text": "- directories: companies, associations, organizations, governments, educational institutions,",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "2.Subject Guides",
+            "page": 14
+          },
+          {
+            "level": "H2",
+            "text": "-arts and humanities",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "3.Educational tool-kits",
+            "page": 14
+          },
+          {
+            "level": "H2",
+            "text": "ing methodologies, information literacy-guides to information gather",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "4.Journals, books, maps, music etc.",
+            "page": 14
+          }
+        ]
+      },
+      "expected": {
+        "title": "RFP:Request for Proposal To Present a Proposal for Developing the Business Plan for the Ontario Digital Library  ",
+        "outline": [
+          {
+            "level": "H1",
+            "text": "Ontario’s Digital Library ",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "A Critical Component for Implementing Ontario’s Road Map to Prosperity Strategy ",
+            "page": 1
+          },
+          {
+            "level": "H2",
+            "text": "Summary ",
+            "page": 1
+          },
+          {
+            "level": "H3",
+            "text": "Timeline: ",
+            "page": 1
+          },
+          {
+            "level": "H2",
+            "text": "Background ",
+            "page": 2
+          },
+          {
+            "level": "H3",
+            "text": "Equitable access for all Ontarians: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Shared decision-making and accountability: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Shared governance structure: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Shared funding: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Local points of entry: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Access: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Guidance and Advice: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Training: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Provincial Purchasing & Licensing: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Technological Support: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "What could the ODL really mean? ",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "For each Ontario citizen it could mean: ",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "For each Ontario student it could mean: ",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "For each Ontario library it could mean: ",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "For the Ontario government it could mean: ",
+            "page": 5
+          },
+          {
+            "level": "H2",
+            "text": "The Business Plan to be Developed ",
+            "page": 5
+          },
+          {
+            "level": "H3",
+            "text": "Milestones ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "Approach and Specific Proposal Requirements ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "Evaluation and Awarding of Contract ",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "Appendix A: ODL Envisioned Phases & Funding ",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "Phase I: Business Planning ",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "Phase II: Implementing and Transitioning ",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "Phase III: Operating and Growing the ODL ",
+            "page": 8
+          },
+          {
+            "level": "H2",
+            "text": "Appendix B: ODL Steering Committee Terms of Reference ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "1. Preamble ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "2. Terms of Reference ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "3. Membership ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "4. Appointment Criteria and Process ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "5. Term ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "6. Chair ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "7. Meetings ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "8. Lines of Accountability and Communication ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "9. Financial and Administrative Policies ",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "Appendix C: ODL’s Envisioned Electronic Resources ",
+            "page": 13
+          }
+        ]
+      },
+      "comparison": {
+        "title_match": false,
+        "title_actual": "RFP: Request for Proposal",
+        "title_expected": "RFP:Request for Proposal To Present a Proposal for Developing the Business Plan for the Ontario Digital Library  ",
+        "outline_count_actual": 92,
+        "outline_count_expected": 39,
+        "exact_matches": 0,
+        "level_matches": 4,
+        "text_matches": 4,
+        "page_matches": 0,
+        "page_errors": [
+          {
+            "text": "Summary",
+            "actual_page": 2,
+            "expected_page": 1,
+            "difference": 1
+          },
+          {
+            "text": "For each Ontario citizen it could mean:",
+            "actual_page": 5,
+            "expected_page": 4,
+            "difference": 1
+          },
+          {
+            "text": "For each Ontario student it could mean:",
+            "actual_page": 5,
+            "expected_page": 4,
+            "difference": 1
+          },
+          {
+            "text": "For each Ontario library it could mean:",
+            "actual_page": 6,
+            "expected_page": 5,
+            "difference": 1
+          }
+        ],
+        "missing_entries": [
+          {
+            "level": "H1",
+            "text": "Ontario’s Digital Library ",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "A Critical Component for Implementing Ontario’s Road Map to Prosperity Strategy ",
+            "page": 1
+          },
+          {
+            "level": "H3",
+            "text": "Timeline: ",
+            "page": 1
+          },
+          {
+            "level": "H2",
+            "text": "Background ",
+            "page": 2
+          },
+          {
+            "level": "H3",
+            "text": "Equitable access for all Ontarians: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Shared decision-making and accountability: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Shared governance structure: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Shared funding: ",
+            "page": 3
+          },
+          {
+            "level": "H3",
+            "text": "Local points of entry: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Access: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Guidance and Advice: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Training: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Provincial Purchasing & Licensing: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "Technological Support: ",
+            "page": 4
+          },
+          {
+            "level": "H3",
+            "text": "What could the ODL really mean? ",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "For the Ontario government it could mean: ",
+            "page": 5
+          },
+          {
+            "level": "H2",
+            "text": "The Business Plan to be Developed ",
+            "page": 5
+          },
+          {
+            "level": "H3",
+            "text": "Milestones ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "Approach and Specific Proposal Requirements ",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "Evaluation and Awarding of Contract ",
+            "page": 7
+          },
+          {
+            "level": "H2",
+            "text": "Appendix A: ODL Envisioned Phases & Funding ",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "Phase I: Business Planning ",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "Phase II: Implementing and Transitioning ",
+            "page": 8
+          },
+          {
+            "level": "H3",
+            "text": "Phase III: Operating and Growing the ODL ",
+            "page": 8
+          },
+          {
+            "level": "H2",
+            "text": "Appendix B: ODL Steering Committee Terms of Reference ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "1. Preamble ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "2. Terms of Reference ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "3. Membership ",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "4. Appointment Criteria and Process ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "5. Term ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "6. Chair ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "7. Meetings ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "8. Lines of Accountability and Communication ",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "9. Financial and Administrative Policies ",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "Appendix C: ODL’s Envisioned Electronic Resources ",
+            "page": 13
+          }
+        ],
+        "extra_entries": [
+          {
+            "level": "H1",
+            "text": "RFP: Request for Proposal",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "To Present a Proposal for Developing",
+            "page": 1
+          },
+          {
+            "level": "H3",
+            "text": "The purpose of this",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "developed is to document and clearly communicate:",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "Proposals may be e-mailed, mailed, couriered or faxed to: Larry Moore",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "Those proposals that are short-listed will be invited to discuss their proposal during the week",
+            "page": 2
+          },
+          {
+            "level": "H4",
+            "text": "If you require further information or have any questions, please contact Michael Ridley by e-",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Background",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "First, some background on the ODL. For the last two years the Ontario Library Association",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Libraries that serve very different clientele recognize that by working together they can create",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "We are moving into a period of convergence. With convergence we no longer have to license",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "The concept of an ODL is a key element in",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Libraries have long been a key delivery point for public services. The ODL will allow that",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "Jurisdiction-wide digital libraries are very practical and very real. The ODL we propose is",
+            "page": 3
+          },
+          {
+            "level": "H4",
+            "text": "The ODL will be a partnership-based organization providing seamless electronic information",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "The principles which will define and guide the ODL are:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Equitable access for all Ontarians:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will facilitate consensus among members regarding ODL’s portfolio of electronic",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will balance the interests and realities of small and large as well as rich and poor",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Shared governance structure:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will work based on an underlying assumption of trust and synergy.",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Shared funding:",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will leverage provincial, institutional, and local dollars to realize economies of scale",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "We will be willing to pool talents and dollars in order to provide common services that are",
+            "page": 4
+          },
+          {
+            "level": "H4",
+            "text": "Local points of entry:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "We will provide the licenses, infrastructure, services and support that enable local",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "Access:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "ce:Guidance and Advi",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "Training:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "Technological Support:",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "What could the ODL really mean?",
+            "page": 5
+          },
+          {
+            "level": "H4",
+            "text": "Ontario government it could mean:For the",
+            "page": 6
+          },
+          {
+            "level": "H4",
+            "text": "porated non-profit organization governed by a Board of Directors electedODL will be an incor",
+            "page": 6
+          },
+          {
+            "level": "H1",
+            "text": "2007. The planning process must also secure the full commitment of all stakeholders, as",
+            "page": 6
+          },
+          {
+            "level": "H2",
+            "text": "Milestones",
+            "page": 7
+          },
+          {
+            "level": "H3",
+            "text": "Approach and Specific Proposal Requirements",
+            "page": 7
+          },
+          {
+            "level": "H4",
+            "text": "The firm/consultant",
+            "page": 7
+          },
+          {
+            "level": "H4",
+            "text": "The proposal should include the following information:",
+            "page": 7
+          },
+          {
+            "level": "H4",
+            "text": "Specifically, proposals will be evaluated proposals according to the following criteria:",
+            "page": 8
+          },
+          {
+            "level": "H4",
+            "text": "Questions regarding this RFP should be directed by e-mail only to Michael Ridley",
+            "page": 8
+          },
+          {
+            "level": "H4",
+            "text": "Bidders are asked not to contact any other member of the ODL Catalyst Team or the ODL Steering",
+            "page": 8
+          },
+          {
+            "level": "H4",
+            "text": "Phase I: Business Planning",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Result:",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Phase II: Implementing and Transitioning",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Result:",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "The seed money requested will allow libraries to realign their budgets and services as the infrastructure",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "Phase III: Operating and Growing the ODL",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "In the third phase the ODL moves into the operational stage. Ontarians will experience the full benefits",
+            "page": 9
+          },
+          {
+            "level": "H4",
+            "text": "The ongoing funding of the ODL will be based on a partnership model involving all the key participants",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "outlines the model. This model is based on these assumptions:",
+            "page": 10
+          },
+          {
+            "level": "H3",
+            "text": "OVERVIEW OF ODL FUNDING MODEL",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "Funding Source",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "While the private sector will be invited to participate in the ODL through the endowment, gifts and in-",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "A $50M budget leverages the consortium buying power of the province’s libraries to secure the best",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "It is important to recognize that every new dollar per citizen invested in the Ontario Digital Library has a",
+            "page": 10
+          },
+          {
+            "level": "H4",
+            "text": "Appendix B:",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "1.Preamble",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "2.Terms of Reference",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "2.7 securing commitment from library, government, and institutional stakeholders for implementation",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "2.9 undertaking advocacy efforts to promote the ODL to the broader communities including library",
+            "page": 11
+          },
+          {
+            "level": "H1",
+            "text": "3.Membership",
+            "page": 11
+          },
+          {
+            "level": "H2",
+            "text": "3.1 Schools:",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "3.3 Colleges:",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "3.4 Public libraries:",
+            "page": 11
+          },
+          {
+            "level": "H3",
+            "text": "3.6 It is anticipated that as planning for the ODL evolves, the Steering Committee may, at its",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "4.Appointment Criteria and Process",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "5.Term",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "6.Chair",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "Chair will be appointed by the Board of the Ontario Library Association.",
+            "page": 12
+          },
+          {
+            "level": "H3",
+            "text": "Role of the Chair:",
+            "page": 12
+          },
+          {
+            "level": "H4",
+            "text": "In addition to the characteristics for appointees (4.2) the role of the chair will be as a process agent",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "7.Meetings",
+            "page": 12
+          },
+          {
+            "level": "H1",
+            "text": "8.Lines of Accountability and Communication",
+            "page": 12
+          },
+          {
+            "level": "H2",
+            "text": "8.3 The Steering Committee is accountable to its constituent groups and other stakeholders for",
+            "page": 13
+          },
+          {
+            "level": "H1",
+            "text": "9.Financial and Administrative Policies",
+            "page": 13
+          },
+          {
+            "level": "H2",
+            "text": "9.1 Service on the Steering Committee is non-remunerative",
+            "page": 13
+          },
+          {
+            "level": "H3",
+            "text": "9.2 Travel and meeting expenses for Steering Committee members are reimbursed according to the",
+            "page": 13
+          },
+          {
+            "level": "H3",
+            "text": "9.3 Conflict of Interest:",
+            "page": 13
+          },
+          {
+            "level": "H4",
+            "text": "Appendix C:",
+            "page": 14
+          },
+          {
+            "level": "H4",
+            "text": "The purpose of the ODL is to provide equal access to information for all Ontario citizens through",
+            "page": 14
+          },
+          {
+            "level": "H4",
+            "text": "of their education, life and work. Some examples:",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "1.Reference Resources",
+            "page": 14
+          },
+          {
+            "level": "H2",
+            "text": "- directories: companies, associations, organizations, governments, educational institutions,",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "2.Subject Guides",
+            "page": 14
+          },
+          {
+            "level": "H2",
+            "text": "-arts and humanities",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "3.Educational tool-kits",
+            "page": 14
+          },
+          {
+            "level": "H2",
+            "text": "ing methodologies, information literacy-guides to information gather",
+            "page": 14
+          },
+          {
+            "level": "H1",
+            "text": "4.Journals, books, maps, music etc.",
+            "page": 14
+          }
+        ],
+        "accuracy_score": 0.0
+      },
+      "debug_info": {
+        "blocks_extracted": 615,
+        "font_clustering_complete": true,
+        "blocks_after_header_filter": 589,
+        "table_blocks": 59,
+        "pages_processed": 14,
+        "title_detected": true,
+        "title_length": 25,
+        "headings_detected": 92,
+        "processing_time": 1.5142223834991455
+      },
+      "processing_time": 1.5142223834991455
+    },
+    {
+      "file": "pdfs/file04.pdf",
+      "pdf_name": "file04",
+      "result": {
+        "title": "Parsippany -Troy Hills STEM Pathways",
+        "outline": [
+          {
+            "level": "H1",
+            "text": "Goals:",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "PATHWAY OPTIONS",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "REGULAR PATHWAY",
+            "page": 1
+          }
+        ]
+      },
+      "expected": {
+        "title": "Parsippany -Troy Hills STEM Pathways",
+        "outline": [
+          {
+            "level": "H1",
+            "text": "PATHWAY OPTIONS",
+            "page": 0
+          }
+        ]
+      },
+      "comparison": {
+        "title_match": true,
+        "title_actual": "Parsippany -Troy Hills STEM Pathways",
+        "title_expected": "Parsippany -Troy Hills STEM Pathways",
+        "outline_count_actual": 3,
+        "outline_count_expected": 1,
+        "exact_matches": 0,
+        "level_matches": 1,
+        "text_matches": 1,
+        "page_matches": 0,
+        "page_errors": [
+          {
+            "text": "PATHWAY OPTIONS",
+            "actual_page": 1,
+            "expected_page": 0,
+            "difference": 1
+          }
+        ],
+        "missing_entries": [],
+        "extra_entries": [
+          {
+            "level": "H1",
+            "text": "Goals:",
+            "page": 1
+          },
+          {
+            "level": "H1",
+            "text": "REGULAR PATHWAY",
+            "page": 1
+          }
+        ],
+        "accuracy_score": 0.0
+      },
+      "debug_info": {
+        "blocks_extracted": 75,
+        "font_clustering_complete": true,
+        "blocks_after_header_filter": 75,
+        "table_blocks": 9,
+        "pages_processed": 1,
+        "title_detected": true,
+        "title_length": 36,
+        "headings_detected": 3,
+        "processing_time": 0.21044492721557617
+      },
+      "processing_time": 0.21044492721557617
+    },
+    {
+      "file": "pdfs/file05.pdf",
+      "pdf_name": "file05",
+      "result": {
+        "title": "",
+        "outline": []
+      },
+      "expected": {
+        "title": "",
+        "outline": [
+          {
+            "level": "H1",
+            "text": "HOPE To SEE You THERE! ",
+            "page": 0
+          }
+        ]
+      },
+      "comparison": {
+        "title_match": true,
+        "title_actual": "",
+        "title_expected": "",
+        "outline_count_actual": 0,
+        "outline_count_expected": 1,
+        "exact_matches": 0,
+        "level_matches": 0,
+        "text_matches": 0,
+        "page_matches": 0,
+        "page_errors": [],
+        "missing_entries": [
+          {
+            "level": "H1",
+            "text": "HOPE To SEE You THERE! ",
+            "page": 0
+          }
+        ],
+        "extra_entries": [],
+        "accuracy_score": 0.0
+      },
+      "debug_info": {
+        "blocks_extracted": 15,
+        "font_clustering_complete": true,
+        "blocks_after_header_filter": 15,
+        "table_blocks": 0,
+        "pages_processed": 1,
+        "title_detected": false,
+        "title_length": 0,
+        "headings_detected": 0,
+        "processing_time": 0.1115715503692627
+      },
+      "processing_time": 0.1115715503692627
+    }
+  ]
+}
