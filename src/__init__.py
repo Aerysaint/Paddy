@@ -1,1 +1,0 @@
-# PDF Layout Extractor Package
