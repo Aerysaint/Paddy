@@ -1,0 +1,29 @@
+# Core dependencies for PDF processing and chunking
+PyMuPDF>=1.23.0
+numpy>=1.24.0,<2.0.0
+
+# Machine Learning and NLP dependencies
+sentence-transformers>=2.2.0
+# PyTorch CPU-only versions will be installed via Dockerfile
+transformers>=4.30.0
+
+# Quantized model support for local LLM
+#ctransformers>=0.2.0
+
+# Standard library dependencies (no installation needed):
+# - typing (Python 3.5+)
+# - json (built-in)
+# - os (built-in)
+# - sys (built-in)
+# - argparse (built-in)
+# - subprocess (built-in)
+# - logging (built-in)
+# - pathlib (Python 3.4+)
+# - time (built-in)
+# - re (built-in)
+# - collections (built-in)
+# - statistics (built-in)
+# - unicodedata (built-in)
+# - datetime (built-in)
+
+# Note: scikit-learn was removed as it's not actually used in the code
