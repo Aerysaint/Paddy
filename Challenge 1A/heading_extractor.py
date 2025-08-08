@@ -577,13 +577,43 @@ class HumanLikeHeadingExtractor:
             groups[size].append(block)
         return groups
     
+    def _is_table_of_contents(self, block: TextBlock) -> bool:
+        """Check if a text block is likely from a table of contents."""
+        text = block.text.strip()
+
+        # Pattern 1: Text followed by a dot leader and a page number
+        # e.g., "1. Introduction ........................... 5"
+        toc_pattern_1 = re.compile(r'.+\s*\.{5,}\s*\d+\s*$')
+        if toc_pattern_1.match(text):
+            return True
+
+        # Pattern 2: Text ending with a page number, common in TOCs
+        # e.g., "Chapter 1: Getting Started 1"
+        toc_pattern_2 = re.compile(r'.+\s+\d+\s*$')
+        # Check if the text is short and ends with a number
+        if len(text.split()) > 2 and text.split()[-1].isdigit() and toc_pattern_2.match(text):
+            # Further validation: check if the number is a plausible page number
+            page_number = int(text.split()[-1])
+            if page_number > 0 and page_number < 1000: # Assuming documents have less than 1000 pages
+                return True
+
+        return False
+
     def _is_valid_heading_text(self, block: TextBlock) -> bool:
         """Check if text is valid for a heading (not purely numeric or special characters)."""
         text = block.text.strip()
         
         if not text:
             return False
-        
+
+        # First, check if it's a TOC entry
+        if self._is_table_of_contents(block):
+            return False
+
+        # Filter out sentences
+        if '.' in text and len(text.split()) > 5:
+            return False
+
         # Don't reject text that starts with numbers if it has meaningful content after
         # This was the main bug - rejecting "1 Introduction", "2 Background", etc.
         

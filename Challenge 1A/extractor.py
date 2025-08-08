@@ -161,20 +161,22 @@ class PDFTextExtractor:
         # Determine if blocks should be grouped based on spacing
         line_height = block1["font_size"] * 1.2  # Approximate line height
         
-        # Group if:
-        # 1. They're on the same line (very small vertical gap)
-        # 2. They're on consecutive lines with normal line spacing and similar horizontal alignment
-        # 3. The vertical gap is small enough to be considered part of the same paragraph
+        # Stricter grouping rules to avoid merging unrelated text (like TOC entries)
+        # 1. Must be on the same line or consecutive lines with small vertical gap.
+        # 2. Horizontal distance must be small, indicating they are in the same column.
         
-        same_line = vertical_gap < self.tolerance
-        consecutive_lines = vertical_gap < line_height * 1.5 and horizontal_distance < block1["font_size"]
-        paragraph_continuation = vertical_gap < line_height * 2.5  # Allow for slightly larger gaps within paragraphs
+        # Max vertical gap to be considered part of the same paragraph
+        max_vertical_gap = line_height * 1.5
         
-        # For paragraph continuation, also check if there's reasonable text flow
-        # (not a huge horizontal jump that would indicate a new column or section)
-        reasonable_flow = horizontal_distance < block1["font_size"] * 10
+        # Max horizontal distance to be considered part of the same flow of text
+        # A small multiplier of font size, e.g., 2 times the font size.
+        # This will prevent merging text across large gaps (like in TOCs).
+        max_horizontal_distance = block1["font_size"] * 2
         
-        return same_line or (consecutive_lines and reasonable_flow) or (paragraph_continuation and reasonable_flow)
+        if vertical_gap < max_vertical_gap and horizontal_distance < max_horizontal_distance:
+            return True
+
+        return False
     
     def _create_text_block(self, group: List[dict], page_number: int) -> TextBlock:
         """Create a TextBlock from a group of similar blocks."""
