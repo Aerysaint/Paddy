@@ -1,0 +1,71 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Node modules
+node_modules/
+.next/
+.nuxt/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Docker files
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Test results
+test-results/
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Data files (if they're large)
+backend/data/files/audio/
+backend/data/files/current/
+backend/data/files/library/
+backend/data/store/
+
+# Test files
+backend/tests/_tmp_arxiv/
+backend/tests/results/
