@@ -1,0 +1,23 @@
+# Exclude local Python virtual environments
+.venv
+.venv*/
+backend/.venv
+backend/.venv*/
+backend/.venv_wsl/
+
+# Python caches
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+
+# Node modules
+**/node_modules/
+
+# VCS and OS noise
+.git
+.gitignore
+.DS_Store
+
+# IDE settings
+.vscode/
+.idea/
