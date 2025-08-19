@@ -27,7 +27,12 @@ except Exception:
     HashingVectorizer = None  # type: ignore
     _sk_available = False
 from PIL import Image
-import pytesseract
+try:
+    import pytesseract
+    _tesseract_available = True
+except Exception:
+    pytesseract = None  # type: ignore
+    _tesseract_available = False
 from llm_call import get_llm_response
 from generate_audio import generate_audio, generate_audio_podcast
 try:
@@ -64,7 +69,7 @@ USE_HASH_EMBED = os.environ.get("USE_HASH_EMBED", "1") == "1"
 HASH_DIM = int(os.environ.get("HASH_DIM", str(2**15)))  # 32768 by default
 
 # Optional Windows tesseract path
-if os.environ.get("TESSERACT_PATH"):
+if os.environ.get("TESSERACT_PATH") and _tesseract_available:
     pytesseract.pytesseract.tesseract_cmd = os.environ["TESSERACT_PATH"]
 
 os.makedirs(STORE_DIR, exist_ok=True)
@@ -186,9 +191,13 @@ def extract_text_with_ocr(doc_path: str) -> List[Dict[str, Any]]:
     for i, page in enumerate(doc):
         text = page.get_text("text").strip()
         if len(text) < 20:  # likely scanned
-            pix = page.get_pixmap(dpi=200, alpha=False)
-            img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-            text = pytesseract.image_to_string(img, lang="eng").strip()
+            if _tesseract_available and pytesseract is not None:
+                pix = page.get_pixmap(dpi=200, alpha=False)
+                img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                text = pytesseract.image_to_string(img, lang="eng").strip()
+            else:
+                # Fallback: use whatever text PyMuPDF extracted, even if sparse
+                text = page.get_text("text").strip() or f"[Page {i+1} - OCR not available]"
         pages.append({
             "page_num": i + 1,
             "text": text,
