@@ -1,0 +1,4 @@
+# Optional: enable SentenceTransformers (pulls PyTorch CPU wheels)
+-sentence-transformers==3.0.1
+# If install fails, try installing torch first (CPU only):
+# pip install torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu

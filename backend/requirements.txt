@@ -1,0 +1,22 @@
+fastapi==0.112.0
+uvicorn[standard]==0.30.5
+pydantic==2.8.2
+python-multipart==0.0.9
+numpy==1.26.4
+faiss-cpu==1.8.0.post1
+scikit-learn==1.5.1
+# Pin to a Windows-stable build to avoid DLL import issues
+pymupdf==1.24.9
+pillow==10.4.0
+pytesseract==0.3.10
+jinja2==3.1.4
+langchain
+langchain-openai
+langchain-google-genai 
+langchain-community
+google-cloud-texttospeech>=2.16.5
+pydub>=0.25.1
+
+# Load env files automatically
+python-dotenv==1.0.1
+	# Optional SBERT requirements can be added here.

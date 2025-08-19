@@ -1,2 +1,27 @@
+# Node
+frontend/node_modules
+frontend/.next
+frontend/.turbo
+
+# Python
+backend/.venv
 __pycache__
-venv
+*.pyc
+
+# Data
+backend/data/store/
+backend/data/files/library/
+backend/data/files/current/
+
+# OS
+.DS_Store
+Thumbs.db
+
+backend/.env.example
+backend/tests/.env.example
+frontend/.env.example
+frontend/.next
+frontend/.vscode
+frontend/node_modules
+backend/.venv
+backend/.venv_wsl
