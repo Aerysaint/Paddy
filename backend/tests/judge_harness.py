@@ -295,7 +295,7 @@ def llm_multimodal_judge_gemini(
         raise RuntimeError("Missing dependency google-generativeai. Install with: pip install google-generativeai") from e
 
     # Configure with provided API key
-    genai.configure(api_key=google_api_key)
+    genai.configure(api_key='AIzaSyDpluHIhrQlx5LRDYKOeQWlPIbnYLr8F3E')
 
     # Upload a small set of PDFs to control latency/cost
     uploaded = []
@@ -407,7 +407,7 @@ def main():
         # Choose judge: multimodal (Gemini with PDFs) or text-only (existing LLM)
         if args.multimodal:
             # Ensure we have an API key visible in this environment
-            google_api_key = os.environ.get("GOOGLE_API_KEY", "").strip()
+            google_api_key = os.environ.get("GOOGLE_API_KEY", "AIzaSyDpluHIhrQlx5LRDYKOeQWlPIbnYLr8F3E").strip()
             if not google_api_key:
                 print("Missing GOOGLE_API_KEY in environment for multimodal judge.")
                 results.append({"selection": sel, "error": "GOOGLE_API_KEY not set for multimodal"})

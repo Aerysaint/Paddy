@@ -553,6 +553,52 @@ def _reference_penalty(heading: Optional[str], text: str) -> float:
     except Exception:
         return 0.0
 
+def _extract_acronyms_and_keywords(selection: str) -> List[str]:
+    """Extract useful acronyms like ViT, DDPM, GAN and key Title-Case phrases from the selection.
+    Returns a deduped short list to be used as extra queries for anchoring/related.
+    """
+    import re
+    sel = (selection or "").strip()
+    out: List[str] = []
+    seen = set()
+    if not sel:
+        return out
+    # Acronyms within parentheses: Vision Transformer (ViT) -> ViT
+    for m in re.finditer(r"\(([A-Z][A-Za-z0-9]{1,9})\)", sel):
+        token = m.group(1).strip()
+        if token and token not in seen:
+            seen.add(token)
+            out.append(token)
+    # Standalone all-caps or CamelCase short tokens (2-6 chars): ViT, DDPM, GAN, BERT
+    for m in re.finditer(r"\b([A-Z]{2,6}|[A-Z][a-zA-Z]{1,5}[A-Z][A-Za-z]{0,3})\b", sel):
+        token = m.group(1).strip()
+        if token and token not in seen:
+            seen.add(token)
+            out.append(token)
+    # Title-case bigrams: Vision Transformer, Residual Network (limit length)
+    for m in re.finditer(r"\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,})\b", sel):
+        phrase = m.group(1).strip()
+        if 3 <= len(phrase) <= 40 and phrase not in seen:
+            seen.add(phrase)
+            out.append(phrase)
+    # Keep it small
+    return out[:6]
+
+def _strip_citation_noise(text: str) -> str:
+    """Remove common citation artifacts like [12], [3,4], 'doi', 'arXiv' and URLs to reduce reference bias."""
+    import re
+    t = (text or "")
+    # Remove bracket citations
+    t = re.sub(r"\[[0-9,\-\s]{1,}\]", " ", t)
+    # Remove DOI/arXiv mentions
+    t = re.sub(r"\bdoi:\S+", " ", t, flags=re.IGNORECASE)
+    t = re.sub(r"\barxiv:\S+", " ", t, flags=re.IGNORECASE)
+    # Remove raw URLs
+    t = re.sub(r"https?://\S+", " ", t)
+    # Normalize whitespace
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
 
 @app.post("/api/insights")
 async def generate_insights(
@@ -580,17 +626,20 @@ async def generate_insights(
     # Build home section from the best hit using the selection to find the anchor
     # First, find candidates with the raw selection to locate the anchor chunk
     # Anchor search with adaptive threshold fallback
-    anchor_hits = search_multi_rrf([sel], top_k=max(10, top_k), threshold=max(0.0, threshold - 0.05)) or []
+    # Add acronym/keyword expansions for more precise anchoring (e.g., ViT, DDPM)
+    _ak = _extract_acronyms_and_keywords(sel)
+    anchor_queries = [sel] + _ak if _ak else [sel]
+    anchor_hits = search_multi_rrf(anchor_queries, top_k=max(10, top_k), threshold=max(0.0, threshold - 0.05)) or []
     if not anchor_hits and threshold > 0.0:
-        anchor_hits = search_multi_rrf([sel], top_k=max(10, top_k), threshold=max(0.0, threshold - 0.1)) or []
+        anchor_hits = search_multi_rrf(anchor_queries, top_k=max(10, top_k), threshold=max(0.0, threshold - 0.1)) or []
     if not anchor_hits and threshold > 0.0:
-        anchor_hits = search_multi_rrf([sel], top_k=max(10, top_k), threshold=0.0) or []
+        anchor_hits = search_multi_rrf(anchor_queries, top_k=max(10, top_k), threshold=0.0) or []
     if not anchor_hits:
         return {"analysis": None, "selection": sel, "home": None, "related": [], "provider": os.getenv("LLM_PROVIDER", "gemini")}
     # Rerank top few anchor candidates by lexical overlap with built section text
     best_primary = None
     best_score = -1.0
-    for cand in anchor_hits[:5]:
+    for cand in anchor_hits[:10]:
         sec_tmp, _ = build_section_for_hit(cand, meta)
         ov = _token_overlap(sel, sec_tmp.get("text", ""))
         name_ov = _name_overlap(sel, cand.get("file"), sec_tmp.get("displayName"), sec_tmp.get("heading"))
@@ -628,13 +677,17 @@ async def generate_insights(
     # Use the entire home section text as the semantic query to retrieve related sections
     # Build multiple query variants for better recall
     heading_hint = home_section.get("heading") or ""
-    query_text = (home_section.get("text") or selected_para or sel)
+    # Sanitize query text to avoid citation noise
+    query_text = _strip_citation_noise(home_section.get("text") or selected_para or sel)
     q_variants = [
         query_text,
         sel,
         (selected_para or sel),
         (heading_hint + ": " + sel) if heading_hint else sel,
     ]
+    # Add acronym/keyword expansions as additional variants
+    if _ak:
+        q_variants.extend(_ak[:4])
     hits = search_multi_rrf(q_variants, top_k=top_k, threshold=threshold)
     if not hits and threshold > 0.0:
         hits = search_multi_rrf(q_variants, top_k=top_k, threshold=max(0.0, threshold - 0.05))
@@ -979,34 +1032,39 @@ async def generate_audio_endpoint(
         return JSONResponse(status_code=400, content={"error": "No corpus indexed"})
 
     # Anchor with adaptive fallback using fused search
-    anchor_hits = search_multi_rrf([sel], top_k=max(10, top_k), threshold=max(0.0, threshold - 0.05)) or []
+    _ak = _extract_acronyms_and_keywords(sel)
+    anchor_queries = [sel] + _ak if _ak else [sel]
+    anchor_hits = search_multi_rrf(anchor_queries, top_k=max(10, top_k), threshold=max(0.0, threshold - 0.05)) or []
     if not anchor_hits and threshold > 0.0:
-        anchor_hits = search_multi_rrf([sel], top_k=max(10, top_k), threshold=max(0.0, threshold - 0.1)) or []
+        anchor_hits = search_multi_rrf(anchor_queries, top_k=max(10, top_k), threshold=max(0.0, threshold - 0.1)) or []
     if not anchor_hits and threshold > 0.0:
-        anchor_hits = search_multi_rrf([sel], top_k=max(10, top_k), threshold=0.0) or []
+        anchor_hits = search_multi_rrf(anchor_queries, top_k=max(10, top_k), threshold=0.0) or []
     if not anchor_hits:
         return JSONResponse(status_code=404, content={"error": "No anchors found"})
     # Audio: apply the same overlap-aware anchor selection
     best_primary = None
     best_score = -1.0
-    for cand in anchor_hits[:5]:
+    for cand in anchor_hits[:10]:
         sec_tmp, _ = build_section_for_hit(cand, meta)
         ov = _token_overlap(sel, sec_tmp.get("text", ""))
         name_ov = _name_overlap(sel, cand.get("file"), sec_tmp.get("displayName"), sec_tmp.get("heading"))
-        s = 0.8 * float(cand.get("score", 0.0)) + 0.15 * ov + 0.05 * name_ov
+        ref_pen = _reference_penalty(sec_tmp.get("heading"), sec_tmp.get("text") or "")
+        s = 0.8 * float(cand.get("score", 0.0)) + 0.10 * ov + 0.10 * name_ov - 0.12 * ref_pen
         if s > best_score:
             best_score = s
             best_primary = cand
     primary = best_primary or anchor_hits[0]
     home_section, _ = build_section_for_hit(primary, meta)
 
-    query_text = (home_section.get("text") or sel)
+    query_text = _strip_citation_noise(home_section.get("text") or sel)
     heading_hint = home_section.get("heading") or ""
     q_variants = [
         query_text,
         sel,
         (heading_hint + ": " + sel) if heading_hint else sel,
     ]
+    if _ak:
+        q_variants.extend(_ak[:4])
     hits = search_multi_rrf(q_variants, top_k=top_k, threshold=threshold)
     if not hits and threshold > 0.0:
         hits = search_multi_rrf(q_variants, top_k=top_k, threshold=max(0.0, threshold - 0.05))

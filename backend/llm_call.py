@@ -58,7 +58,7 @@ def get_llm_response(messages):
     # Use messages in current format directly
 
     if provider == "gemini":
-        api_key = os.getenv("GOOGLE_API_KEY", "")
+        api_key = os.getenv("GOOGLE_API_KEY", "AIzaSyDpluHIhrQlx5LRDYKOeQWlPIbnYLr8F3E")
         credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
         model_name = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
