@@ -30,7 +30,7 @@ WORKDIR /app
 COPY . .
 
 # Set environment variables
-ENV FRONTEND_ORIGIN=http://localhost:3000
+ENV FRONTEND_ORIGIN=http://localhost:8080
 
 
 # Install Python dependencies
@@ -50,13 +50,13 @@ uvicorn app:app --reload --host 0.0.0.0 --port 8000 &\n\
 \n\
 # Start frontend server in background\n\
 cd /app/frontend\n\
-npm run dev -- --hostname 0.0.0.0 --port 3000 &\n\
+npm run dev -- --hostname 0.0.0.0 --port 8080 &\n\
 \n\
 # Wait for any process to exit\n\
 wait\n' > start.sh && chmod +x start.sh
 
 # Expose ports
-EXPOSE 8000 3000
+EXPOSE 8000 8080
 
 # Start both services
 CMD ["./start.sh"]
