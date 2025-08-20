@@ -36,7 +36,7 @@ ENV FRONTEND_ORIGIN=http://localhost:3000
 # Install Python dependencies
 WORKDIR /app/backend
 RUN pip install -r requirements.txt
-
+ENV NEXT_PUBLIC_ADOBE_CLIENT_ID=$(ADOBE_EMBED_API_KEY)
 # Install Node.js dependencies
 WORKDIR /app/frontend
 RUN npm install
